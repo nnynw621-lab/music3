@@ -5,7 +5,8 @@ import subprocess
 import sys
 from pyrogram import Client
 from pytgcalls.types.input_stream import AudioPiped
-from pytgcalls.types.input_stream import AudioPiped
+from pytgcalls.types.input_stream.remote import AudioPiped
+from pytgcalls.types import InputStream
 import telebot
 from telebot.types import InlineKeyboardButton, InlineKeyboardMarkup
 import yt_dlp
@@ -167,7 +168,11 @@ if len(sys.argv) >= 2:
         title = info.get("title", "مقطع صوتي")
       await client.start()
       await call_py.start()
-      await call_py.play_stream(chat_id, AudioPiped(url))
+      await call_py.join_group_call(
+    chat_id,
+    InputStream(AudioPiped(url)),
+    stream_type="local_stream",
+      )
       return title, None
     except Exception as e:
       return None, f"❌ خطأ أثناء التشغيل الصوتي: {e}"

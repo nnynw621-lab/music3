@@ -5,7 +5,7 @@ import subprocess
 import sys
 from pyrogram import Client
 from pytgcalls.types.input_stream import AudioPiped
-from pytgcalls.types import AudioPiped
+from pytgcalls.types.input_stream import AudioPiped
 import telebot
 from telebot.types import InlineKeyboardButton, InlineKeyboardMarkup
 import yt_dlp

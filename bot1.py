@@ -168,7 +168,7 @@ if len(sys.argv) >= 2:
 
       await client.start()
       await call_py.start()
-      await call_py.play_stream(chat_id, AudioPiped(url))
+      await call_py.play(chat_id, AudioPiped(url))
       return title, None
     except Exception as e:
       return None, f"❌ خطأ أثناء التشغيل الصوتي: {e}"

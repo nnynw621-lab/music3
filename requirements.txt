@@ -1,0 +1,5 @@
+pytelegrambotapi
+yt-dlp
+pyrogram
+py-tgcalls
+tgcrypto

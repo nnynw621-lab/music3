@@ -4,7 +4,7 @@ import sqlite3
 import subprocess
 import sys
 from pyrogram import Client
-from pytgcalls import PyTgCalls
+from pytgcalls.types.input_stream import AudioPiped
 from pytgcalls.types import AudioPiped
 import telebot
 from telebot.types import InlineKeyboardButton, InlineKeyboardMarkup
